@@ -174,3 +174,17 @@ setTimeout(() => {
     }, 800);
 
 }, 4000);
+
+const pantalla = document.getElementById("pantalla-secciones");
+const contenido = document.getElementById("contenido-secciones");
+
+const botones = document.querySelectorAll("#pantalla-secciones a");
+
+botones.forEach(boton => {
+    boton.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        pantalla.style.display = "none";
+        contenido.style.display = "block";
+    });
+});
