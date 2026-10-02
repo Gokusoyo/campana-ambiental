@@ -95,3 +95,19 @@ body {
     background-size: cover;
     background-position: center;
 }
+#loader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #060912;
+    z-index: 9999;
+}
+#loaderCanvas {
+    width:100%;
+    height:100%;
+    display: block;
+}
+#loader {
+    transition: opacity 0.8s ease;
+}
