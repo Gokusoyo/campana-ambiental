@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lobter', cursive;
     max-width: 1000px;
     margin: auto;
     padding: 28px;
@@ -28,9 +28,9 @@ h3 {
 
 h4 {
     text-align: center;
-    font-size: 45px;
+    font-size: 40px !important;
     margin-top: 40px;
-    color: blue;
+    color: greenyellow !important;
 }
 
 p { font-size: 22px;
@@ -65,7 +65,7 @@ body {
     color: white;
 }
     
-}
+
 
 p {
     font-size: 35px;
@@ -148,7 +148,7 @@ body{
   font-size:36px;
   text-align: center;
   text-decoration:none;
-  background-color:#FFA12B;
+  background-color:#26c406;
   display:block;
   position:relative;
   padding:20px 40px;
@@ -168,11 +168,11 @@ body{
 
 .button a:active{
   top:10px;
-  background-color:#F78900;
+  background-color:#26c406;
   
-  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
-  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  -webkit-box-shadow:inset 0 1px 0 #0f721f, inset 0 -3px 0 #0f721f;
+  -moz-box-shadow:inset 0 1px 0 #0f721f, inset 0 -3pxpx 0 #0f721f;
+  box-shadow:inset 0 1px 0 #0f721f, inset 0 -3px 0 #0f721f;
 }
 
 .button:after{
@@ -209,4 +209,31 @@ body {
     background-position: top center;
     
     color: #f1f5f2;
+}
+.seccion {
+    display: none;
+    }
+    #sobre-contenido {
+        display: none;
+    }
+
+    h3, h5, h6 {
+        color: chartreuse !important;
+    font-size: 45px !important;
+    text-align: center !important;
+    }
+    .seccion.animar {
+    animation: aparecerSeccion 0.5s ease;
+}
+
+@keyframes aparecerSeccion {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

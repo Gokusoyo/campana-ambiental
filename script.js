@@ -1,4 +1,5 @@
 const canvas = document.getElementById("loaderCanvas");
+console.log("SCRIPT FUNCIONANDO");
 const ctx = canvas.getContext("2d");
 
 let w, h;
@@ -175,16 +176,56 @@ setTimeout(() => {
 
 }, 4000);
 
-const pantalla = document.getElementById("pantalla-secciones");
+const pantallaSecciones = document.getElementById("pantalla-secciones");
 const contenido = document.getElementById("contenido-secciones");
-
+const secciones = document.querySelectorAll(".seccion");
+const sobre = document.getElementById("sobre-contenido");
 const botones = document.querySelectorAll("#pantalla-secciones a");
 
 botones.forEach(boton => {
+
     boton.addEventListener("click", function(event) {
+
         event.preventDefault();
 
-        pantalla.style.display = "none";
+        const destino = this.getAttribute("href");
+
+        pantallaSecciones.style.display = "none";
         contenido.style.display = "block";
+
+        secciones.forEach(seccion => {
+            seccion.style.display = "none";
+        });
+
+        sobre.style.display = "none";
+
+        if (destino === "#sobre-contenido") {
+
+            sobre.style.display = "block";
+
+        } else {
+
+            const seccion = document.querySelector(destino);
+
+            if (seccion) {
+
+                seccion.style.display = "block";
+
+                seccion.classList.remove("animar");
+
+                void seccion.offsetWidth;
+
+                seccion.classList.add("animar");
+            }
+        }
     });
+});
+
+
+document.getElementById("volver-secciones").addEventListener("click", function() {
+
+    document.getElementById("contenido-secciones").style.display = "none";
+
+    document.getElementById("pantalla-secciones").style.display = "block";
+
 });
